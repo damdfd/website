@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    border: solid rgb(0, 0, 0, 0.6) 1px;
+    box-shadow: -6px 6px 5px black;
+}
+
+.rowi {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.columni {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 50%;
+    padding: 5px;
+}
+
+.fitfat {
+    text-align: center;
+    text-shadow: black 2px;
+    flex: 40%;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .fitfat {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .fitfat {
+        flex: 50%;
+    }
+}
+
+::webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7px;
+    /* height: 100%; */
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 30s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+}
+
+footer {
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(240, 239, 234);
+}
+
+.pie {
+    display: flex;
+    flex-direction: column;
+    flex: start;
+    width: 100%;
+    padding: 10px;
+}
+
+.pie>a {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.lst {
+    text-align: center;
+}
